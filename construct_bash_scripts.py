@@ -28,7 +28,7 @@ def write_session_scripts(sess_path, fresh_write):
 	# write the sbatch header for sub_cmd bash file
 	sbatch_header = []
 	sbatch_header.append("#!/bin/bash")
-	sbatch_header.append("#SBATCH --mem=120g")
+	sbatch_header.append("#SBATCH --mem=10g")
 	sbatch_header.append("#SBATCH --cpus-per-task=1")
 	sbatch_header.append("#SBATCH --error=" + psd_log_fpath)
 	sbatch_header.append("#SBATCH --output=" + psd_log_fpath)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 	big_bash_fpath = swarm_path + "/psd_%s_big_bash.sh" % output_suffix
 
 	swarm = open(swarm_fpath, 'w')
-	swarm.write("swarm -g 10 -b 20 -t 1 --time 2:00:00 --gres=lscratch:15 --merge-output --logdir " + swarm_path + "/log_dump -f " + big_bash_fpath)
+	swarm.write("swarm -g 10 -b 10 -t 1 --time 2:00:00 --gres=lscratch:15 --merge-output --logdir " + swarm_path + "/log_dump -f " + big_bash_fpath)
 	swarm.close()
 
 	big_bash = open(big_bash_fpath, 'w')
