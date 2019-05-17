@@ -5,6 +5,7 @@ matlab_compiler_ver_str = "/lscratch/$SLURM_JOB_ID/v94"
 
 spikes_pipeline_dir = "/data/%s/python_scripts/_utah_ms_pipe_tools" % data_dir_name
 lfp_pipeline_dir = "/data/%s/python_scripts/_utah_lfp_pipe_tools" % data_dir_name
+psd_pipeline_dir = "/data/%s/python_scripts/_utah_psd_pipe_tools" % data_dir_name
 
 mountainsort_binaries_dir = "/data/%s/installs/mountainlab/bin" % data_dir_name
 nsx2mda_matlab_dir = "/data/%s/matlab_scripts/_utah_matlab_tools" % data_dir_name
