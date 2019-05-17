@@ -15,6 +15,12 @@ def write_session_scripts(sess_path, fresh_write):
 
 	psd_scripts_dir = psd_dir + "/scripts"
 
+	if os.path.isdir(psd_dir) is False:
+		os.mkdir(psd_dir)
+
+	if os.path.isdir(psd_scripts_dir) is False:
+		os.mkdir(psd_scripts_dir)
+
 	psd_log_fpath = psd_scripts_dir + "/_psd.log"
 	psd_bash_fpath = psd_scripts_dir + "/psd.sh"
 	psd_bash = open(psd_bash_fpath, 'w')
