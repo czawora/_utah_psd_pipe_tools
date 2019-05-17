@@ -52,7 +52,7 @@ if __name__ == "__main__":
 		rerun_sesslist = open(rerun_sesslist_fname, 'w')
 
 		for sess in incomplete_sess:
-			rerun_sesslist.write(sess + "\n")
+			rerun_sesslist.write(sess.split("/")[-1] + "\n")
 
 		rerun_sesslist.close()
 
