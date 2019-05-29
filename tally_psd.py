@@ -30,9 +30,10 @@ if __name__ == "__main__":
 		sess_path = "/".join(dir.split("/")[:-1])
 		psd_path = sess_path + "/psd"
 
+		ignore_glob = glob.glob(psd_path + "/_ignore_me.txt")
 		psd_glob = glob.glob(psd_path + "/*.mat") + glob.glob(psd_path + "/*.png")
 
-		if len(psd_glob) < 2:
+		if len(psd_glob) < 2 and ignore_glob == []:
 			incomplete_sess.append(sess_path)
 
 	num_incomplete = len(incomplete_sess)
