@@ -31,7 +31,7 @@ if __name__ == "__main__":
 		psd_path = sess_path + "/psd"
 
 		ignore_glob = glob.glob(psd_path + "/_ignore_me.txt")
-		psd_glob = glob.glob(psd_path + "/*.mat") + glob.glob(psd_path + "/*.png")
+		psd_glob = glob.glob(psd_path + "/psd.mat") + glob.glob(psd_path + "/*.png")
 
 		if len(psd_glob) < 2 and ignore_glob == []:
 			incomplete_sess.append(sess_path)
