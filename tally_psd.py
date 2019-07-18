@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
 	subj_path = args.subj_path
 	rerun = args.rerun
-	print_flag = args.print_flag
+	print_flag = args.print
 
 	subj_path_files = os.listdir(subj_path)
 
