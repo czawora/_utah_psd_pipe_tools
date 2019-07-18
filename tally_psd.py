@@ -34,7 +34,7 @@ if __name__ == "__main__":
 		psd_glob = glob.glob(psd_path + "/psd.mat")
 		png_glob = glob.glob(psd_path + "/*.png")
 
-		if len(png_glob) == 0 and psd_glob == [] and ignore_glob == []:
+		if psd_glob == [] and ignore_glob == []:
 			incomplete_sess.append(sess_path)
 
 	num_incomplete = len(incomplete_sess)
