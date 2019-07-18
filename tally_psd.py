@@ -12,11 +12,13 @@ if __name__ == "__main__":
 
 	parser.add_argument('subj_path')
 	parser.add_argument('--rerun', action='store_true')
+	parser.add_argument('--print', action='store_true')
 
 	args = parser.parse_args()
 
 	subj_path = args.subj_path
 	rerun = args.rerun
+	print_flag = args.print_flag
 
 	subj_path_files = os.listdir(subj_path)
 
@@ -42,8 +44,9 @@ if __name__ == "__main__":
 	print("sessions found with raw data: " + str(num_raw_dirs))
 	print("number of incomplete sessions: " + str(num_incomplete))
 
-	for sess in incomplete_sess:
-		print("\t" + sess)
+	if print_flag is True:
+		for sess in incomplete_sess:
+			print("\t" + sess)
 
 	if rerun:
 
