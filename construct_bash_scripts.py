@@ -100,7 +100,7 @@ if __name__ == "__main__":
 	big_bash_fpath = swarm_path + "/psd_%s_big_bash.sh" % output_suffix
 
 	swarm = open(swarm_fpath, 'w')
-	swarm.write("swarm -g 30 -b 10 -t 1 --time 2:00:00 --gres=lscratch:15 --merge-output --logdir " + swarm_path + "/log_dump -f " + big_bash_fpath)
+	swarm.write("swarm -g 50 -b 10 -t 1 --time 2:00:00 --gres=lscratch:15 --merge-output --logdir " + swarm_path + "/log_dump -f " + big_bash_fpath)
 	swarm.close()
 
 	big_bash = open(big_bash_fpath, 'w')
